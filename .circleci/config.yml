@@ -1,12 +1,15 @@
 version: 2.1
 commands: # a reusable command with parameters
   greeting:
+    description: "description for the command"
     parameters:
       to:
+        description: "this is the to description"
         default: "world"
         type: string
     steps:
       - run: echo "Hello <<parameters.to>>"
+
 jobs:
   mjob:
     docker:
