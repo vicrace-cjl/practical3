@@ -7,8 +7,11 @@ commands: # a reusable command with parameters
         description: "this is the to description"
         default: "world"
         type: string
+      where:
+        default: "Fine"
+        type: string
     steps:
-      - run: echo "Hello <<parameters.to>>"
+      - run: echo "Hello <<parameters.to>>, and you? <<parameters.where>>"
 
 jobs:
   mjob:
