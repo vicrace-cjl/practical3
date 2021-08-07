@@ -16,7 +16,7 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - greeting:
-        to: "my_name"
+          to: "my_name"
          
 workflows:
   my-workflow:
