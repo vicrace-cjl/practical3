@@ -8,16 +8,16 @@ commands: # a reusable command with parameters
     steps:
       - run: echo "Hello <<parameters.to>>"
 jobs:
-  my-job:
+  mjob:
     docker:
       - image: cimg/base:stable
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
-      - greeting:
-          to: "My-Name"
+      - greeting
+         
 workflows:
   my-workflow:
     jobs:
-      - my-job
+      - mjob
