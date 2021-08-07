@@ -2,7 +2,7 @@ version: 2.1
 commands: # a reusable command with parameters
   greeting:
     parameters:
-      o:
+      to:
         default: "world"
         type: string
     steps:
@@ -16,7 +16,7 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - greeting:
-          o: "my_name"
+          to: "my_name"
          
 workflows:
   my-workflow:
